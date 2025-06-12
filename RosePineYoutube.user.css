@@ -51,83 +51,28 @@
 	/*Main color variables*/
 	:root
 	{
-		if stylus-deepdark-style == "Rose-Pine" || @media (prefers-color-scheme: dark) {
-			if mainColorDark == "Love" {
-				--main-color: #eb6f92;
+		/* Rose Pine (Dark) */
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--main-color: mainColorDark;
+				--main-background: #191724;
+				--second-background: #1f1d2e;
+				--hover-background: #26233a;
+				--main-text: #e0def4;
+				--dimmer-text: #908caa;
+				--shadow: 0 1px 0.5px rgb(0, 0, 0, .13);
 			}
-			else if mainColorDark == "Gold" {
-				--main-color: #f6c177;
-			}
-			else if mainColorDark == "Rose" {
-				--main-color: #ebbcba;
-			}
-			else if mainColorDark == "Pine" {
-				--main-color: #31748f;
-			}
-			else if mainColorDark == "Foam" {
-				--main-color: #9ccfd8;
-			}
-			else if mainColorDark == "Iris" {
-				--main-color: #c4a7e7;
-			}
-			--main-background: #191724;
-			--second-background: #1f1d2e;
-			--hover-background: #26233a;
-			--main-text: #e0def4;
-			--dimmer-text: #908caa;
-			--shadow: 0 1px 0.5px rgb(0, 0, 0, .13)
 		}
-		else if stylus-deepdark-style == "Rose-Pine-Moon" {
-			if mainColorDark == "Love" {
-				--main-color: #eb6f92;
+		@media (prefers-color-scheme: light) {
+			:root {
+				--main-color: mainColorDawn;
+				--main-background: #faf4ed;
+				--second-background: #fffaf3;
+				--hover-background: #f2e9de;
+				--main-text: #575279;
+				--dimmer-text: #797593;
+				--shadow: 0 1px 0.5px rgba(0, 0, 0, .13);
 			}
-			else if mainColorDark == "Gold" {
-				--main-color: #f6c177;
-			}
-			else if mainColorDark == "Rose" {
-				--main-color: #ebbcba;
-			}
-			else if mainColorDark == "Pine" {
-				--main-color: #31748f;
-			}
-			else if mainColorDark == "Foam" {
-				--main-color: #9ccfd8;
-			}
-			else if mainColorDark == "Iris" {
-				--main-color: #c4a7e7;
-			}
-			--main-background: #232136;
-			--second-background: #2a273f;
-			--hover-background: #393552;
-			--main-text: #e0def4;
-			--dimmer-text: #908caa;
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13)
-		}
-		else if stylus-deepdark-style == "Rose-Pine-Dawn" || @media (prefers-color-scheme: light) {
-			if mainColorDawn == "Love" {
-				--main-color: #b4637a;
-			}
-			else if mainColorDawn == "Gold" {
-				--main-color: #ea9d34;
-			}
-			else if mainColorDawn == "Rose" {
-				--main-color: #d7827e;
-			}
-			else if mainColorDawn == "Pine" {
-				--main-color: #286983;
-			}
-			else if mainColorDawn == "Foam" {
-				--main-color: #56949f;
-			}
-			else if mainColorDawn == "Iris" {
-				--main-color: #907aa9;
-			}
-			--main-background: #faf4ed;
-			--second-background: #fffaf3;
-			--hover-background: #f2e9de;
-			--main-text: #575279;
-			--dimmer-text: #797593;
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13)
 		}
 	}
 	/*Error page*/
