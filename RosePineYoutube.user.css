@@ -2,7 +2,7 @@
 @name Rose Pine YouTube
 @namespace github.com/artilate/youtube
 @homepageURL https://github.com/artilate/youtube
-@version 1.4.4
+@version 1.4.5
 
 @updateURL https://github.com/artilate/youtube/raw/main/RosePineYoutube.user.css
 @description Soho vibes for YouTube
@@ -51,284 +51,83 @@
 	/*Main color variables*/
 	:root
 	{
-		if stylus-deepdark-style == "Deep-Dark" {
-			--main-color: #00adee;
-			--main-background: #111;
-			--second-background: #181818;
-			--hover-background: #232323;
-			--main-text: #eff0f1;
-			--dimmer-text: #ccc;
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .3);
+		if stylus-deepdark-style == "Rose-Pine" {
+			if mainColorDark == "Love" {
+				--main-color: #eb6f92;
+			}
+			else if mainColorDark == "Gold" {
+				--main-color: #f6c177;
+			}
+			else if mainColorDark == "Rose" {
+				--main-color: #ebbcba;
+			}
+			else if mainColorDark == "Pine" {
+				--main-color: #31748f;
+			}
+			else if mainColorDark == "Foam" {
+				--main-color: #9ccfd8;
+			}
+			else if mainColorDark == "Iris" {
+				--main-color: #c4a7e7;
+			}
+			--main-background: #191724;
+			--second-background: #1f1d2e;
+			--hover-background: #26233a;
+			--main-text: #e0def4;
+			--dimmer-text: #908caa;
+			--shadow: 0 1px 0.5px rgb(0, 0, 0, .13)
 		}
-		else if stylus-deepdark-style == "Inspired-Dark" {
-			--main-color: #5e8acc;
-			--main-background: #232629;
-			--second-background: #181818;
-			--hover-background: #515254;
-			--main-text: #eee;
-			--dimmer-text: #ccc;
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13);
+		else if stylus-deepdark-style == "Rose-Pine-Moon" {
+			if mainColorDark == "Love" {
+				--main-color: #eb6f92;
+			}
+			else if mainColorDark == "Gold" {
+				--main-color: #f6c177;
+			}
+			else if mainColorDark == "Rose" {
+				--main-color: #ebbcba;
+			}
+			else if mainColorDark == "Pine" {
+				--main-color: #31748f;
+			}
+			else if mainColorDark == "Foam" {
+				--main-color: #9ccfd8;
+			}
+			else if mainColorDark == "Iris" {
+				--main-color: #c4a7e7;
+			}
+			--main-background: #232136;
+			--second-background: #2a273f;
+			--hover-background: #393552;
+			--main-text: #e0def4;
+			--dimmer-text: #908caa;
+			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13)
 		}
-		else if stylus-deepdark-style == "Breeze-Dark" {
-			--main-color: #3daee9;
-			--main-background: #232629;
-			--second-background: #2a2e32;
-			--hover-background: #31363b;
-			--main-text: #eff0f1;
-			--dimmer-text: #bdc3c7;
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13);
-		}
-		else if stylus-deepdark-style == "Vertex-Dark" {
-			--main-color: #4080fb;
-			--main-background: #2b2b2c;
-			--second-background: #353638;
-			--hover-background: #515254;
-			--main-text: #f3f3f5;
-			--dimmer-text: #aeafb0;
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13);
-		}
-		else if stylus-deepdark-style == "Arc-Dark" {
-			--main-color: #5294e2;
-			--main-background: #343944;
-			--second-background: #383c4a;
-			--hover-background: #414a59;
-			--main-text: #c1c8d1;
-			--dimmer-text: #b3bac5;
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13);
-		}
-		else if stylus-deepdark-style == "Dracula" {
-			--main-color: #bd93f9;                      /*Purple*/
-			--main-background: hsl(231, 15%, 18%);      /*Background*/
-			--second-background: hsl(231, 15%, 22%);    /*Manually generated from Background*/
-			--hover-background: #44475a;                /*Selection*/
-			--main-text:#f8f8f2;                        /*Foreground*/
-			--dimmer-text: #bcc2cd;                     /*From .app-title https://draculatheme.com/*/
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .15);
-		}
-		else if stylus-deepdark-style == "Firefox-Dark" {
-			--main-color: #5675b9;
-			--main-background: #272b35;
-			--second-background: #181d20;
-			--hover-background: #353a44;
-			--main-text: #e3eef9;
-			--dimmer-text: #bec0cc;
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13);
-		}
-		else if stylus-deepdark-style == "Firefox-57" {
-			--main-color: #4080fb;
-			--main-background: #0c0c0d;
-			--second-background: #252526;
-			--hover-background: #323234;
-			--main-text: #f9f9fa;
-			--dimmer-text: #d0d0d0;
-			--shadow: 0 1px 0.5px rgba(54, 54, 54, .2);
-		}
-		else if stylus-deepdark-style == "Firefox-Dark-91" {
-			--main-color: #00ddff;
-			--main-background: #1c1b22;
-			--second-background: #23222b;
-			--hover-background: #2b2a33;
-			--main-text: #fbfbfe;
-			--dimmer-text: #b8b7bb;
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13);
-		}
-		else if stylus-deepdark-style == "Firefox-Alpenglow-Dark" {
-			--main-color: #C488FC;
-			--main-background: #21133d;
-			--second-background: #2a1e52;
-			--hover-background: #2d245b;
-			--main-text: #ffffff;
-			--dimmer-text: #E3DBFA;
-			--shadow: 0 1px .5px rgba(35, 22, 65, .5);
-		}
-		else if stylus-deepdark-style ==  "Discord" {
-			--main-color: #7289da;
-			--main-background: #1e2124;
-			--second-background: #2f3136;
-			--hover-background: #484b51;
-			--main-text: #fff;
-			--dimmer-text: #ada8aa;
-			--shadow: 0 1px 0.5px rgba(47, 49, 54, .23);
-		}
-		else if stylus-deepdark-style == "YouTube-Dark" {
-			--main-color: #e52117;
-			--main-background: #111;
-			--second-background: #232323;
-			--hover-background: #343434;
-			--main-text: #e1e1e1;
-			--dimmer-text: #7f7f7f;
-			--shadow: 0 1px 0.5px rgba(54, 54, 54, .2);
-		}
-		else if stylus-deepdark-style == "Mint-Y-Dark" {
-			--main-color: #9ab87c;
-			--main-background: #2f2f2f;
-			--second-background: #383838;
-			--hover-background: #404040;
-			--main-text: #fff;
-			--dimmer-text: #d5dada;
-			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13);
-		}
-		else if stylus-deepdark-style == "9anime" {
-			--main-color: #723f8c;
-			--main-background: #0b0a0d;
-			--second-background: #17151c;
-			--hover-background: #1E1c25;
-			--main-text: #f9f6fb;
-			--dimmer-text: #cac0cf;
-			--shadow: 0 1px 0.5px rgba(54, 54, 54, .13);
-		}
-		else if stylus-deepdark-style == "Black-and-White" {
-			--main-color: #fff;
-			--main-background: #000;
-			--second-background: #1e1e1e;
-			--hover-background: #313131;
-			--main-text: #fff;
-			--dimmer-text: #aaa;
-			--shadow: 0 1px 0.5px rgba(54 ,54 ,54, .2);
-		}
-		else if stylus-deepdark-style == "Yellow" {
-			--main-color: #ffc700;
-			--main-background: #141414;
-			--second-background: #202222;
-			--hover-background: #353838;
-			--main-text: #eff0f1;
-			--dimmer-text: #9f9999;
-			--shadow: 0 1px 0.5px rgba(34, 34, 34, .2);
-		}
-		else if stylus-deepdark-style == "Yellow-2" {
-			--main-color: #ffc700;
-			--main-background: #0a0800;
-			--second-background: #0c0a04;
-			--hover-background: #0f0d05;
-			--main-text: #fffdf5;
-			--dimmer-text: #fff8e1;
-			--shadow: 0 1px 0.5px rgba(34, 34, 34, .2);
-		}
-		else if stylus-deepdark-style == "Ubuntu-Grey" {
-			--main-color: #ef7847;
-			--main-background: #312d2a;
-			--second-background: #3d3c38;
-			--hover-background: #59564d;
-			--main-text: #f2f1ef;
-			--dimmer-text: #e6e5e3;
-			--shadow: 0 1px 0.5px rgba(89, 86, 77, .12);
-		}
-		else if stylus-deepdark-style == "Ubuntu-Purple" {
-			--main-color: #ef7847;
-			--main-background: #2c071a;
-			--second-background: #430b28;
-			--hover-background: #520D30;
-			--main-text: #f2f1ef;
-			--dimmer-text: #e6e5e3;
-			--shadow: 0 1px 0.5px rgba(82, 13, 48, .2);
-		}
-		else if stylus-deepdark-style == "Orange" {
-			--main-color: #ff6905;
-			--main-background: #0a0400;
-			--second-background: #0e0702;
-			--hover-background: #110903;
-			--main-text: #fff9f5;
-			--dimmer-text: #ffede1;
-			--shadow: 0 1px 0.5px rgba(255, 105, 5, .1);
-		}
-		else if stylus-deepdark-style == "Jisho" {
-			--main-color: #ef7d6c;
-			--main-background: #332222;
-			--second-background: #2a1b1b;
-			--hover-background: #863b2f;
-			--main-text: #EFB26C;
-			--dimmer-text: #986E3F;
-			--shadow: 0 1px 0.5px rgba(37, 19, 5, .19);
-		}
-		else if stylus-deepdark-style == "Adapta-Nokto" {
-			--main-color: #00bcd4;
-			--main-background: #222d32;
-			--second-background: #263238;
-			--hover-background: #2a353b;
-			--main-text: #fff;
-			--dimmer-text: #9b9b9b;
-			--shadow: 0 1px 0.5px  rgba(61, 77, 86, .2);
-		}
-		else if stylus-deepdark-style == "Adapta-Breath-Nokto" {
-			--main-color: #1abc9c;
-			--main-background: #222d32;
-			--second-background: #263238;
-			--hover-background: #2a353b;
-			--main-text: #fff;
-			--dimmer-text: #9b9b9b;
-			--shadow: 0 1px 0.5px  rgba(42, 53, 59, .32);
-		}
-		else if stylus-deepdark-style == "Solarized-Dark" {
-			--main-color: #268bd2;
-			--main-background: #073642;
-			--second-background: #03303c;
-			--hover-background: #002b36;
-			--main-text: #fdf6E3;
-			--dimmer-text: #eee8d5;
-			--shadow: 0 1px 0.5px  rgba(0, 43, 54, .3);
-		}
-		else if stylus-deepdark-style == "Solarized-Light" {
-			--main-color: #268bd2;
-			--main-background: #fdf6e3;
-			--second-background: #f5efdc;
-			--hover-background: #eee8d5;
-			--main-text: #073642;
-			--dimmer-text: #586e75;
-			--shadow: 0 1px 0.5px  rgba(222, 216, 196, .2);
-		}
-		else if stylus-deepdark-style == "Gruvbox-Dark" {
-			--main-color: #fe8019;
-			--main-background: #1d2021;
-			--second-background: #282828;
-			--hover-background: #3c3836;
-			--main-text: #fbf1c7;
-			--dimmer-text: #ebdbb2;
-			--shadow: 0 1px 0.5px  rgba(60, 56, 54, .22);
-		}
-		else if stylus-deepdark-style == "Gruvbox-Light" {
-			--main-color: #af3a03;
-			--main-background: #f9f5d7;
-			--second-background: #fbf1c7;
-			--hover-background: #ebdbb2;
-			--main-text: #282828;
-			--dimmer-text: #3c3836;
-			--shadow: 0 1px 0.5px  rgba(235, 219, 178, .33);
-		}
-		else if stylus-deepdark-style == "NierAutomata-Dark" {
-			--main-color: #fe8019;
-			--main-background: #33302a;
-			--second-background: #48453c;
-			--hover-background: #7c6f64;
-			--main-text: #dad4bb;
-			--dimmer-text: #bab5a1;
-			--shadow: 0 1px 0.5px  rgba(124, 111, 100, .15);
-		}
-		else if stylus-deepdark-style == "NierAutomata-Light" {
-			--main-color: #fe8019;
-			--main-background: #d1cdb7;
-			--second-background: #dcd8c0;
-			--hover-background: #bab5a1;
-			--main-text: #48453c;
-			--dimmer-text: #33302a;
-			--shadow: 0 1px 0.5px rgba(186, 181, 161, 2);
-		}
-		else if stylus-deepdark-style == "HavocOS" {
-			--main-color: #0794d4;
-			--main-background: #141618;
-			--second-background: #1c1e20;
-			--hover-background: #212528;
-			--main-text: #fff;
-			--dimmer-text: #b9baba;
-			--shadow: 0 1px 0.5px rgba(185, 186, 186, .04);
-		}
-		else if stylus-deepdark-style == "Custom" {
-			--main-color: mainColor;
-			--main-background: mainBackground;
-			--second-background: secondBackground;
-			--hover-background: hoverBackground;
-			--main-text: mainText;
-			--dimmer-text: dimmerText;
-			--shadow: 0 1px 0.5px colorShadow;
+		else if stylus-deepdark-style == "Rose-Pine-Dawn" {
+			if mainColorDawn == "Love" {
+				--main-color: #b4637a;
+			}
+			else if mainColorDawn == "Gold" {
+				--main-color: #ea9d34;
+			}
+			else if mainColorDawn == "Rose" {
+				--main-color: #d7827e;
+			}
+			else if mainColorDawn == "Pine" {
+				--main-color: #286983;
+			}
+			else if mainColorDawn == "Foam" {
+				--main-color: #56949f;
+			}
+			else if mainColorDawn == "Iris" {
+				--main-color: #907aa9;
+			}
+			--main-background: #faf4ed;
+			--second-background: #fffaf3;
+			--hover-background: #f2e9de;
+			--main-text: #575279;
+			--dimmer-text: #797593;
+			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13)
 		}
 	}
 	/*Error page*/
