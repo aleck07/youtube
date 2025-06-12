@@ -11,12 +11,6 @@
 
 @preprocessor stylus
 
-@var select stylus-deepdark-style "Preset themes" [
-	"Rose-Pine",
-	"Rose-Pine-Moon",
-	"Rose-Pine-Dawn",
-]
-
 @var select mainColorDark "Custom Dark accent color" [
 	"Love",
 	"Gold",
