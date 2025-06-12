@@ -51,7 +51,7 @@
 	/*Main color variables*/
 	:root
 	{
-		if stylus-deepdark-style == "Rose-Pine" {
+		if stylus-deepdark-style == "Rose-Pine" || @media (prefers-color-scheme: dark) {
 			if mainColorDark == "Love" {
 				--main-color: #eb6f92;
 			}
@@ -103,7 +103,7 @@
 			--dimmer-text: #908caa;
 			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13)
 		}
-		else if stylus-deepdark-style == "Rose-Pine-Dawn" {
+		else if stylus-deepdark-style == "Rose-Pine-Dawn" || @media (prefers-color-scheme: light) {
 			if mainColorDawn == "Love" {
 				--main-color: #b4637a;
 			}
