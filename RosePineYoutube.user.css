@@ -11,11 +11,11 @@
 
 @preprocessor stylus
 
-@var select stylus-deepdark-style "Preset themes" [
+/* @var select stylus-deepdark-style "Preset themes" [
 	"Rose-Pine",
 	"Rose-Pine-Moon",
 	"Rose-Pine-Dawn",
-]
+] */
 
 @var select mainColorDark "Custom Dark accent color" [
 	"Love",
@@ -51,7 +51,7 @@
 	/*Main color variables*/
 	:root
 	{
-		if stylus-deepdark-style == "Rose-Pine" || @media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: dark) {
 			if mainColorDark == "Love" {
 				--main-color: #eb6f92;
 			}
@@ -77,7 +77,7 @@
 			--dimmer-text: #908caa;
 			--shadow: 0 1px 0.5px rgb(0, 0, 0, .13)
 		}
-		else if stylus-deepdark-style == "Rose-Pine-Moon" {
+		/* else if stylus-deepdark-style == "Rose-Pine-Moon" {
 			if mainColorDark == "Love" {
 				--main-color: #eb6f92;
 			}
@@ -102,8 +102,8 @@
 			--main-text: #e0def4;
 			--dimmer-text: #908caa;
 			--shadow: 0 1px 0.5px rgba(0, 0, 0, .13)
-		}
-		else if stylus-deepdark-style == "Rose-Pine-Dawn" || @media (prefers-color-scheme: light) {
+		} */
+		else if @media (prefers-color-scheme: light) {
 			if mainColorDawn == "Love" {
 				--main-color: #b4637a;
 			}
